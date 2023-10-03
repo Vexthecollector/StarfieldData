@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Starfield Ship Part Picker</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <button id="Cargo" onclick="LoadCargo()" class="SelectButton">Cargo</button>
+    <button id="Engine" onclick="LoadEngines()" class="SelectButton">Engines</button>
+    <button id="FuelTank" onclick="LoadFuelTanks()" class="SelectButton">Fuel Tanks</button>
+    <button id="Equipment" onclick="LoadEquipment()" class="SelectButton">Equipment</button>
+    <button id="GravDrive" onclick="LoadGravDrives()" class="SelectButton">Grav Drives</button>
+    <button id="Reactor" onclick="LoadReactors()" class="SelectButton">Reactors</button>
+    <button id="Shield" onclick="LoadShields()" class="SelectButton">Shields</button>
+    <div align="right">
+        Credit Cost: 
+
+        <input disabled id="creditcost">
+    </div>
+
+    <div>Level Range</div>
+    <input id="min" value="0" min="0" max="60" type="number">
+    <input id="max" value="60" min="0" max="60" type="number">
+
+    <button onclick="SetLimit()">Adjust Levelrange</button>
+    <br>
+    <table id="PartPickedTable" align="left">
+        <tr id="PartPickedHeaderRow">
+            <td style="width: 10%">Component</td>
+            <td>Selection</td>
+            <td>Value</td>
+            <td>Location</td>
+            <td></td>
+        </tr>
+        <tr id="EngineRow" class="MultiRow" max="6">
+            <td style="display:none;"></td>
+            <td>Engine</td>
+            <td>
+                <button onclick="LoadEngines()">
+                    Choose Engine
+                </button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="FuelTankRow" class="Multirow">
+            <td style="display:none;"></td>
+            <td>Fuel Tank</td>
+            <td>
+                <button onclick="LoadFuelTanks()">
+                    Choose Fuel Tank
+                </button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="CargoRow" class="Multirow">
+            <td style="display:none;"></td>
+            <td>Cargo</td>
+            <td>
+                <button onclick="LoadCargo()">
+                    Choose Cargo
+                </button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="EquipmentRow" class="Multirow">
+            <td style="display:none;"></td>
+            <td>Equipment</td>
+            <td>
+                <button onclick="LoadEquipment()">
+                    Choose Equipment
+                </button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="GravDriveRow">
+            <td style="display:none;"></td>
+            <td>Grav Drive</td>
+            <td>
+                <button onclick="LoadGravDrives()">
+                    Choose Grav Drive
+                </button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="ReactorRow">
+            <td style="display:none;"></td>
+            <td>Reactor</td>
+            <td>
+                <button onclick="LoadReactors()">
+                    Choose Reactor
+                </button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="ShieldRow">
+            <td style="display:none;"></td>
+            <td>Shield</td>
+            <td>
+                <button onclick="LoadShields()">
+                    Choose Shield
+                </button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <table id="MainTable" align="right">
+        <tr id="MainTableHeaderRow"></tr>
+
+    </table>
+
+    <div id="BottomDataRow">
+        <table id="BottomDataRowTable">
+            <tr id="BottomDataRowTableHeaderRow">
+                <td id="Weapon1Header" class="DataRowHeader">Weapon1</td>
+                <td id="Weapon2Header" class="DataRowHeader">Weapon2</td>
+                <td id="Weapon3Header" class="DataRowHeader">Weapon3</td>
+                <td id="HullHeader" class="DataRowHeader">Hull</td>
+                <td id="ShieldHeader" class="DataRowHeader">Shield</td>
+                <td id="CargoHeader" class="DataRowHeader">Cargo</td>
+                <td id="MaxCrewHeader" class="DataRowHeader">Max Crew</td>
+                <td id="JumpRangeHeader" class="DataRowHeader">Jump Range</td>
+                <td id="MobilityHeader" class="DataRowHeader">Mobility</td>
+                <td id="TopSpeedHeader" class="DataRowHeader">Top Speed</td>
+                <td id="MassHeader" class="DataRowHeader">Mass</td>
+            </tr>
+            <tr id="BottomDataRowTableDataRow">
+                <td id="Weapon1Data" class="DataRowData">0</td>
+                <td id="Weapon2Data" class="DataRowData">0</td>
+                <td id="Weapon3Data" class="DataRowData">0</td>
+                <td id="HullData" class="DataRowData">0</td>
+                <td id="ShieldData" class="DataRowData">0</td>
+                <td id="CargoData" class="DataRowData">0</td>
+                <td id="MaxCrewData" class="DataRowData">0</td>
+                <td id="JumpRangeData" class="DataRowData">0</td>
+                <td id="MobilityData" class="DataRowData">0</td>
+                <td id="TopSpeedData" class="DataRowData">0</td>
+                <td id="MassData" class="DataRowData">0</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

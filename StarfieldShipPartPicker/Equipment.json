@@ -1,0 +1,57 @@
+[
+  {
+    "Name": "Scan Jammer - Single-Frequency",
+    "Class": "A",
+    "Hull": 3,
+    "Effect": "A Scan Jammer that increases your chance of evasion during a ship scan by 10% if you're using a shielded cargo module and carrying contraband",
+    "Mass": 5,
+    "Value": 3000,
+    "Starship Design Rank": "",
+    "Level": 3,
+    "Location": "Red Mile"
+  },
+  {
+    "Name": "Scan Jammer - Dual-Frequency",
+    "Class": "A",
+    "Hull": 4,
+    "Effect": "A Scan Jammer that increases your chance of evasion during a ship scan by 30% if you're using a shielded cargo module and carrying contraband",
+    "Mass": 6,
+    "Value": 5000,
+    "Starship Design Rank": 1,
+    "Level": 10,
+    "Location": "Red Mile"
+  },
+  {
+    "Name": "Scan Jammer - Multi-Frequency",
+    "Class": "A",
+    "Hull": 5,
+    "Effect": "A Scan Jammer that increases your chance of evasion during a ship scan by 50% if you're using a shielded cargo module and carrying contraband",
+    "Mass": 7,
+    "Value": 10000,
+    "Starship Design Rank": 2,
+    "Level": 16,
+    "Location": "Red Mile"
+  },
+  {
+    "Name": "ComSpike",
+    "Class": "",
+    "Hull": 1,
+    "Effect": "Time to lock onto enemy ships is reduced by 25%, and weapons cost 20% less to use in Targeting Mode.",
+    "Mass": 1,
+    "Value": 0,
+    "Starship Design Rank": "",
+    "Level": "",
+    "Location": "Quest Item"
+  },
+  {
+    "Name": "Conduction Grid",
+    "Class": "",
+    "Hull": 1,
+    "Effect": "Reduces EM Damage by 50%, and increases shield regeneration by 25%.",
+    "Mass": 1,
+    "Value": 0,
+    "Starship Design Rank": "",
+    "Level": "",
+    "Location": "Quest Item"
+  }
+]
