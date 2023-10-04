@@ -206,47 +206,57 @@ function DeleteThis(e) {
 
 function EvaluateSkillLevel(inputarray) {
     let skillLevel = document.getElementById("habSkill").value
-    let temperature = headers.indexOf("temperature")
-    let atmosphere = headers.indexOf("atmosphere")
-    let badTemps = ["Inferno", "Deep freeze"]
-    let badAtmo = ["Tox"]
+    let temperature_intensity = headers.indexOf("temperature_intensity")
+    let pressure_intensity = headers.indexOf("pressure_intensity")
+    let atmosphere_intensity = headers.indexOf("atmosphere_intensity")
+    let gravity_intensity = headers.indexOf("gravity_intensity")
     if (skillLevel == 0) {
         return inputarray.filter(i => {
-            for (let j = 0; j < badTemps.length; j++) {
-                if (i[temperature].includes(badTemps[j])) {
+                if (i[temperature_intensity]>0) {
                     return false
                 }
-            }
-            for (let j = 0; j < badAtmo.length; j++) {
-                if (i[atmosphere].includes(badAtmo[j])) {
+            
+                if (i[pressure_intensity]>0) {
                     return false
                 }
-            }
+                if (i[atmosphere_intensity]>0) {
+                    return false
+                }
+                if (i[gravity_intensity]>0) {
+                    return false
+                }
             return true
         })
     }
     else if (skillLevel == 1) {
         return inputarray.filter(i => {
-            for (let j = 0; j < badAtmo.length; j++) {
-                if (i[atmosphere].includes(badAtmo[j])) {
-                    return false
-                }
+            if (i[pressure_intensity]>0) {
+                return false
+            }
+            if (i[atmosphere_intensity]>0) {
+                return false
+            }
+            if (i[gravity_intensity]>0) {
+                return false
             }
             return true
         })
     }
     else if (skillLevel == 2) {
         return inputarray.filter(i => {
-            for (let j = 0; j < badAtmo.length; j++) {
-                if (i[atmosphere].includes(badAtmo[j])) {
-                    return false
-                }
+            if (i[atmosphere_intensity]>0) {
+                return false
+            }
+            if (i[gravity_intensity]>0) {
+                return false
             }
             return true
         })
     }
     else if (skillLevel == 3) {
-
+        if (i[gravity_intensity]>0) {
+            return false
+        }
     }
     return inputarray
 }
